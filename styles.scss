@@ -1,0 +1,77 @@
+// styles.scss
+
+// Definir variables Sass
+$color-primario: #007bff;
+$color-secundario: #6c757d;
+$fondo: #f8f9fa;
+$borde-redondeado: 5px;
+$fuente: 'Arial', sans-serif;
+
+// Aplicar variables en tus estilos
+body {
+  background-color: $fondo;
+  font-family: $fuente;
+}
+
+.btn {
+  border-radius: $borde-redondeado;
+}
+
+.navbar {
+  background-color: $color-primario;
+  color: white;
+
+  .navbar-brand {
+    img {
+      filter: brightness(0) invert(1); // Ejemplo de selector anidado
+    }
+  }
+}
+//anidacion
+.movie-filter {
+    // Anidación de selectores para mejor legibilidad
+    button {
+      &.btn-transparent {
+        background-color: transparent;
+        border: 1px solid $color-secundario;
+        color: $color-secundario;
+  
+        &:hover {
+          background-color: $color-secundario;
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .movie-cast {
+    // Ejemplo de anidación de selectores para mejor organización
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+  
+    &__item {
+      margin: 10px;
+    }
+  }
+// interpolacion 
+// Ejemplo de interpolación en selector
+$tipo-boton: now_playing;
+
+.movie-filter {
+  button[type='#{$tipo-boton}'] {
+    font-weight: bold;
+  }
+}
+
+// Ejemplo de interpolación en el valor de una propiedad
+.movie-cast__img {
+  width: 100px;
+  height: 100px;
+
+  // Interpolación con cálculo
+  margin-right: #{$tamaño-fuente * 2};
+}
+
+
