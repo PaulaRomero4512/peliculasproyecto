@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popular/MovieBrowser</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="margin-top-placeholder">
+    <nav class="navbar navbar-fixed navbar-expand-lg">
+      <a class="navbar-brand" href="index.html"><img src="img/camara.png" alt="" width="80" height="52"> Movie
+        Browser</a>
+      <div class="mx-auto">
+        <form id="searchForm" class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn-search" type="submit">Search</button>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Ingrese</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- mini menu -->
+  <div class="movie-filter btn-group">
+    <button type="button" title="popular" class="btn btn-transparent">Popular</button>
+    <button type="button" title="now_playing" class="btn btn-transparent">Now playing</button>
+    <button type="button" title="top_rated" class="btn btn-transparent">Top rated</button>
+    <button type="button" title="upcoming" class="btn btn-transparent">Upcoming</button>
+  </div>
+
+  <!-- modals -->
+  <!-- 1 -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/1.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p class="movie__overview" _msttexthash="39206856" _msthash="11">Recientemente despedido y
+            desesperado por trabajar, un joven con problemas llamado Mike acepta aceptar un puesto como guardia de
+            seguridad nocturno en un restaurante temático abandonado: Freddy Fazbear's Pizzeria. Pero pronto descubre
+            que nada en Freddy's es lo que parece.</p>
+          <div>
+            <span class="mr-2" _msttexthash="120302" _msthash="12">Géneros:</span>
+            <span class="mb-1 badge badge-warning" _msttexthash="79911" _msthash="13">Horror</span>
+            <span class="mb-1 badge badge-warning" _msttexthash="116636" _msthash="14">Misterio</span>
+          </div>
+          <div class="movie__stat d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fa fa-clock-o movie__icon" aria-hidden="true">
+              </i>
+              <font _mstmutation="1" _msttexthash="595374" _msthash="15">
+                Fecha de lanzamiento: 24.10.2023
+              </font>
+            </div>
+            <div>
+              <i class="fas fa-history movie__icon" aria-hidden="true">
+              </i>
+              <font _mstmutation="1" _msttexthash="233012" _msthash="16">
+                Duración: 1h 50m
+              </font>
+            </div>
+            <div>
+              <i class="fa fa-money movie__icon" aria-hidden="true">
+              </i>
+              <font _mstmutation="1" _msttexthash="362713" _msthash="17">
+                Presupuesto: $20,000,000
+              </font>
+            </div>
+          </div>
+          <div class="movie-cast">
+            <div class="d-flex justify-content-between align-align-items-center">
+              <h3 class="list-title list-title-dark mb-4" _msttexthash="95706" _msthash="18">
+                Actores
+              </h3>
+            </div>
+            <div
+              class="movie-cast__list d-flex flex-wrap justify-content-md-center justify-content-lg-start justify-content-center align-items-stretch">
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Josh Hutcherson" title="Josh Hutcherson"
+                  src="https://image.tmdb.org/t/p/w185/shW4kr01ipSrjsS46EvQWbEqZeq.jpg" _mstalt="260832" _msthash="20">
+                <div class="movie-cast__info" _msttexthash="375388" _msthash="21">
+                  Josh Hutcherson
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Mike
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Piper Rubio" title="Piper Rubio"
+                  src="https://image.tmdb.org/t/p/w185/x8tDKAgxMKwaNJSd9RB75EIJnOD.jpg" _mstalt="154700" _msthash="22">
+                <div class="movie-cast__info" _msttexthash="370058" _msthash="23">
+                  Flautista Rubio
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Abby
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Elizabeth Lail" title="Elizabeth Lail"
+                  src="https://image.tmdb.org/t/p/w185/lDYjEyqojUs2sF3CgdsOZ9vr2KL.jpg" _mstalt="221767" _msthash="24">
+                <div class="movie-cast__info" _msttexthash="438308" _msthash="25">
+                  Elizabeth Lail
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Vanessa</span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Matthew Lillard" title="Matthew Lillard"
+                  src="https://image.tmdb.org/t/p/w185/51v6jsvzuAXYirIzdqcjLBp46d6.jpg" _mstalt="253981" _msthash="26">
+                <div class="movie-cast__info" _msttexthash="631787" _msthash="27">
+                  Matthew Lillard
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Steve Raglan
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="María Estuardo Masterson" title="Mary Stuart Masterson"
+                  src="https://image.tmdb.org/t/p/w185/njHHxFIJutnRsFM1c85PC8FBOzj.jpg" _mstalt="423137" _msthash="28">
+                <div class="movie-cast__info" _msttexthash="722098" _msthash="29">
+                  Mary Stuart Masterson
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Tía Jane
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Kat Conner Sterling" title="Kat Conner Sterling"
+                  src="https://image.tmdb.org/t/p/w185/5Mq6X1MeVuoSa37VRQw987aF3pZ.jpg" _mstalt="345124" _msthash="30">
+                <div class="movie-cast__info" _msttexthash="441233" _msthash="31">
+                  Kat Conner Sterling
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Max
+
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 1 -->
+  <!-- 2 -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/2.jpg" class="img-fluid" alt="...">
+          <h2>Saw X</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p class="movie__overview" _msttexthash="39206856" _msthash="11">Recientemente despedido y
+            desesperado por trabajar, un joven con problemas llamado Mike acepta aceptar un puesto como guardia de
+            seguridad nocturno en un restaurante temático abandonado: Freddy Fazbear's Pizzeria. Pero pronto descubre
+            que nada en Freddy's es lo que parece.</p>
+          <div>
+            <span class="mr-2" _msttexthash="120302" _msthash="12">Géneros:</span>
+            <span class="mb-1 badge badge-warning" _msttexthash="79911" _msthash="13">Horror</span>
+            <span class="mb-1 badge badge-warning" _msttexthash="116636" _msthash="14">Misterio</span>
+          </div>
+          <div class="movie__stat d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fa fa-clock-o movie__icon" aria-hidden="true">
+              </i>
+              <font _mstmutation="1" _msttexthash="595374" _msthash="15">
+                Fecha de lanzamiento: 24.10.2023
+              </font>
+            </div>
+            <div>
+              <i class="fas fa-history movie__icon" aria-hidden="true">
+              </i>
+              <font _mstmutation="1" _msttexthash="233012" _msthash="16">
+                Duración: 1h 50m
+              </font>
+            </div>
+            <div>
+              <i class="fa fa-money movie__icon" aria-hidden="true">
+              </i>
+              <font _mstmutation="1" _msttexthash="362713" _msthash="17">
+                Presupuesto: $20,000,000
+              </font>
+            </div>
+          </div>
+          <div class="movie-cast">
+            <div class="d-flex justify-content-between align-align-items-center">
+              <h3 class="list-title list-title-dark mb-4" _msttexthash="95706" _msthash="18">
+                Actores
+              </h3>
+            </div>
+            <div
+              class="movie-cast__list d-flex flex-wrap justify-content-md-center justify-content-lg-start justify-content-center align-items-stretch">
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Josh Hutcherson" title="Josh Hutcherson"
+                  src="https://image.tmdb.org/t/p/w185/shW4kr01ipSrjsS46EvQWbEqZeq.jpg" _mstalt="260832" _msthash="20">
+                <div class="movie-cast__info" _msttexthash="375388" _msthash="21">
+                  Josh Hutcherson
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Mike
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Piper Rubio" title="Piper Rubio"
+                  src="https://image.tmdb.org/t/p/w185/x8tDKAgxMKwaNJSd9RB75EIJnOD.jpg" _mstalt="154700" _msthash="22">
+                <div class="movie-cast__info" _msttexthash="370058" _msthash="23">
+                  Flautista Rubio
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Abby
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Elizabeth Lail" title="Elizabeth Lail"
+                  src="https://image.tmdb.org/t/p/w185/lDYjEyqojUs2sF3CgdsOZ9vr2KL.jpg" _mstalt="221767" _msthash="24">
+                <div class="movie-cast__info" _msttexthash="438308" _msthash="25">
+                  Elizabeth Lail
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Vanessa</span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Matthew Lillard" title="Matthew Lillard"
+                  src="https://image.tmdb.org/t/p/w185/51v6jsvzuAXYirIzdqcjLBp46d6.jpg" _mstalt="253981" _msthash="26">
+                <div class="movie-cast__info" _msttexthash="631787" _msthash="27">
+                  Matthew Lillard
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Steve Raglan
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="María Estuardo Masterson" title="Mary Stuart Masterson"
+                  src="https://image.tmdb.org/t/p/w185/njHHxFIJutnRsFM1c85PC8FBOzj.jpg" _mstalt="423137" _msthash="28">
+                <div class="movie-cast__info" _msttexthash="722098" _msthash="29">
+                  Mary Stuart Masterson
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Tía Jane
+                  </span>
+                </div>
+              </div>
+              <div class="movie-cast__item">
+                <img class="movie-cast__img" alt="Kat Conner Sterling" title="Kat Conner Sterling"
+                  src="https://image.tmdb.org/t/p/w185/5Mq6X1MeVuoSa37VRQw987aF3pZ.jpg" _mstalt="345124" _msthash="30">
+                <div class="movie-cast__info" _msttexthash="441233" _msthash="31">
+                  Kat Conner Sterling
+                  <br _istranslated="1">
+                  <span class="small" _istranslated="1">
+                    Max
+
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 2 -->
+  <!-- 3 -->
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 3 -->
+  <!-- 4 -->
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 4 -->
+  <!-- 5 -->
+  <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 5 -->
+  <!-- 6 -->
+  <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 6 -->
+  <!-- 7 -->
+  <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel7" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 7 -->
+  <!-- 8 -->
+  <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel8" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 8 -->
+  <!-- 9 -->
+  <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel9" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 9 -->
+  <!-- 10 -->
+  <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel10" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 10 -->
+  <!-- 11 -->
+  <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 11 -->
+  <!-- 12 -->
+  <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel12" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 12 -->
+  <!-- 13 -->
+  <div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel13" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 13 -->
+  <!-- 14 -->
+  <div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel14" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 14 -->
+  <!-- 15 -->
+  <div class="modal fade" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel15" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 15 -->
+  <!-- 16 -->
+  <div class="modal fade" id="exampleModal16" tabindex="-1" aria-labelledby="exampleModalLabel16" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 16 -->
+  <!-- 17 -->
+  <div class="modal fade" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel17" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 17 -->
+  <!-- 18 -->
+  <div class="modal fade" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel18" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 18 -->
+  <!-- 19 -->
+  <div class="modal fade" id="exampleModal19" tabindex="-1" aria-labelledby="exampleModalLabel19" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 19 -->
+  <!-- 20 -->
+  <div class="modal fade" id="exampleModal20" tabindex="-1" aria-labelledby="exampleModalLabel20" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido del Modal 2
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 20 -->
+  <!-- fin modals -->
+
+  <!-- cards -->
+  <div class="row row-cols-1 row-cols-md-5 g-4">
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">8.36</span>
+          <div class="card-title">Five Night at Freddy's</div>
+          <p class="card-text">Horror, Mystery</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="top_rated">
+      <div class="card h-100 card-zoom">
+        <img src="/img/2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.373</span>
+          <div class="card-title">Saw X</div>
+          <p class="card-text">Horror, Thriller</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal2">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom" data-category="popular">
+        <img src="/img/3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.3</span>
+          <div class="card-title">Muzzle</div>
+          <p class="card-text">Action, Crime, Drama, Thriller</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal3">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.145</span>
+          <div class="card-title">The Exorcist: Believer</div>
+          <p class="card-text"> Horror</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal4">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="top_rated">
+      <div class="card h-100 card-zoom">
+        <img src="/img/5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.967</span>
+          <div class="card-title">The Nun II</div>
+          <p class="card-text"> Horror, Mystery, Thriller</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal5">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.982</span>
+          <div class="card-title">Retribution</div>
+          <p class="card-text"> Action, Thriller, Crime</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal6">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/7.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.244</span>
+          <div class="card-title">Fast X</div>
+          <p class="card-text">Action, Crime, Thriller </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal7">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/8.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.4</span>
+          <div class="card-title">The Equalizer 3</div>
+          <p class="card-text">Action, Thriller, Crime </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal8">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/9.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">8.219</span>
+          <div class="card-title">Coco</div>
+          <p class="card-text">Family, Animation, Fantasy, Music, Comedy, Adventure </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal9">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="top_rated">
+      <div class="card h-100 card-zoom">
+        <img src="/img/10.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.1</span>
+          <div class="card-title">PAW Patrol: The Mighty Movie</div>
+          <p class="card-text">Animation, Family, Action, Science Fiction </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal10">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/11.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.5</span>
+          <div class="card-title">Expend4bles</div>
+          <p class="card-text">Action, Adventure, Thriller </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal11">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/12.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.714</span>
+          <div class="card-title">Mission: Impossible - Dead Reckoning Part One</div>
+          <p class="card-text">Action, Thriller </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal12">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/13.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.65</span>
+          <div class="card-title">Desperation Road</div>
+          <p class="card-text">Action, Crime, Drama, Thriller </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal13">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/14.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">8.03</span>
+          <div class="card-title">Gran Turismo</div>
+          <p class="card-text">Adventure, Action, Drama </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal14">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/15.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">8.138</span>
+          <div class="mb-1 mr-4 card-title">Sound of Freedom</div>
+          <p class="card-text">Action, Drama</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal15">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/16.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.274</span>
+          <div class="card-title">Mavka: The Forest Song</div>
+          <p class="card-text">Animation, Adventure, Family, Fantasy </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal16">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/17.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.773</span>
+          <div class="card-title">Meg 2: The Trench</div>
+          <p class="card-text"> Action, Science Fiction, Horror</p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal17">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/18.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.88</span>
+          <div class="card-title">Sniper: G.R.I.T. - Global Response & Intelligence Team</div>
+          <p class="card-text">Action, Thriller </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal18">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/19.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.041</span>
+          <div class="card-title">Uri: The Surgical Strike</div>
+          <p class="card-text">Action, Drama, War </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal19">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/20.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.026</span>
+          <div class="card-title">Blue Beetle</div>
+          <p class="card-text">Action, Science Fiction, Adventure </p>
+          <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal20">Ver
+            Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- paginacion -->
+  <ul class="pagination">
+    <li class="previous">
+      <a href="index.html">
+        << </a>
+    </li>
+    <li>
+      <a href="index.html">1</a>
+    </li>
+    <li>
+      <a href="page2.html">2</a>
+    </li>
+    <li class="next">
+      <a href="page2.html">>></a>
+    </li>
+  </ul>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="/js/script.js"></script>
+
+</html>

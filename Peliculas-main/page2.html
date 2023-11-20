@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popular/MovieBrowser</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="margin-top-placeholder">
+    <nav class="navbar navbar-fixed navbar-expand-lg">
+      <a class="navbar-brand" href="index.html"><img src="img/camara.png" alt="" width="80" height="52"> Movie
+        Browser</a>
+      <div class="mx-auto">
+        <form id="searchForm" class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn-search" type="submit">Search</button>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Ingrese</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- mini menu -->
+  <div class="movie-filter btn-group">
+    <button type="button" title="popular" class="btn btn-transparent">Popular</button>
+    <button type="button" title="now_playing" class="btn btn-transparent">Now playing</button>
+    <button type="button" title="top_rated" class="btn btn-transparent">Top rated</button>
+    <button type="button" title="upcoming" class="btn btn-transparent">Upcoming</button>
+  </div>
+  <!-- modals -->
+  <!-- 21 -->
+  <div class="modal fade" id="movieModal21" tabindex="-1" aria-labelledby="movieModalLabel21" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/21.jpg" class="img-fluid" alt="...">
+          <h2>Talk to Me</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 21 -->
+  <!-- 22 -->
+  <div class="modal fade" id="movieModal22" tabindex="-1" aria-labelledby="movieModalLabel22" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/22.jpg" class="img-fluid" alt="...">
+          <h2>Once Upon a Studio</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 22 -->
+  <!-- 23 -->
+  <div class="modal fade" id="movieModal23" tabindex="-1" aria-labelledby="movieModalLabel23" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/23.jpg" class="img-fluid" alt="...">
+          <h2>Meteor Storm</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 23 -->
+  <!-- 24 -->
+  <div class="modal fade" id="movieModal24" tabindex="-1" aria-labelledby="movieModalLabel24" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/24.jpg" class="img-fluid" alt="...">
+          <h2>Transformers: Rise of the Beasts</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 24 -->
+  <!-- 25 -->
+  <div class="modal fade" id="movieModal25" tabindex="-1" aria-labelledby="movieModalLabel25" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/25.jpg" class="img-fluid" alt="...">
+          <h2>Barbie</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 25 -->
+  <!-- 26 -->
+  <div class="modal fade" id="movieModal26" tabindex="-1" aria-labelledby="movieModalLabel26" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/26.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 26 -->
+  <!-- 27 -->
+  <div class="modal fade" id="movieModal27" tabindex="-1" aria-labelledby="movieModalLabel27" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/27.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 27 -->
+  <!-- 28 -->
+  <div class="modal fade" id="movieModal28" tabindex="-1" aria-labelledby="movieModalLabel28" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/28.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 28 -->
+  <!-- 29 -->
+  <div class="modal fade" id="movieModal29" tabindex="-1" aria-labelledby="movieModalLabel29" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/29.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 29 -->
+  <!-- 30 -->
+  <div class="modal fade" id="movieModal30" tabindex="-1" aria-labelledby="movieModalLabel30" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/30.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 30 -->
+  <!-- 31 -->
+  <div class="modal fade" id="movieModal31" tabindex="-1" aria-labelledby="movieModalLabel31" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/31.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 31 -->
+  <!-- 32 -->
+  <div class="modal fade" id="movieModal32" tabindex="-1" aria-labelledby="movieModalLabel32" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/32.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 32 -->
+  <!-- 33 -->
+  <div class="modal fade" id="movieModal33" tabindex="-1" aria-labelledby="movieModalLabel33" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/33.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 33 -->
+  <!-- 34 -->
+  <div class="modal fade" id="movieModal34" tabindex="-1" aria-labelledby="movieModalLabel34" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/34.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 34 -->
+  <!-- 35 -->
+  <div class="modal fade" id="movieModal35" tabindex="-1" aria-labelledby="movieModalLabel35" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/35.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 35 -->
+  <!-- 36 -->
+  <div class="modal fade" id="movieModal36" tabindex="-1" aria-labelledby="movieModalLabel36" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/36.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 36 -->
+  <!-- 37 -->
+  <div class="modal fade" id="movieModal37" tabindex="-1" aria-labelledby="movieModalLabel37" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/37.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 37 -->
+  <!-- 38 -->
+  <div class="modal fade" id="movieModal38" tabindex="-1" aria-labelledby="movieModalLabel38" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/38.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 38 -->
+  <!--39 -->
+  <div class="modal fade" id="movieModal39" tabindex="-1" aria-labelledby="movieModalLabel39" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/39.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin 39 -->
+  <!-- 40 -->
+  <div class="modal fade" id="movieModal40" tabindex="-1" aria-labelledby="movieModalLabel40" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">Detalles de la Película</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/img/40.jpg" class="img-fluid" alt="...">
+          <h2>Five Night at Freddy's</h2>
+          <p>Género: Horror, Mystery</p>
+          <p>Clasificación: 8.36</p>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- cards -->
+  <div class="row row-cols-1 row-cols-md-5 g-4">
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/21.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.192</span>
+          <div class="card-title">Talk to Me</div>
+          <p class="card-text">Horror, Thriller</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="21" data-bs-toggle="modal"
+            data-bs-target="#movieModal21">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/22.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">8.5</span>
+          <div class="card-title">Once Upon a Studio</div>
+          <p class="card-text">Family, Animation, Fantasy, Comedy</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="22" data-bs-toggle="modal"
+            data-bs-target="#movieModal22">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/23.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">4.592</span>
+          <div class="card-title">Meteor Storm</div>
+          <p class="card-text">Science Fiction, Adventure, TV Movie</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="23" data-bs-toggle="modal"
+            data-bs-target="#movieModal23">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/24.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.47</span>
+          <div class="card-title">Transformers: Rise of the Beasts</div>
+          <p class="card-text"> Action, Adventure, Science Fiction</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="24" data-bs-toggle="modal"
+            data-bs-target="#movieModal24">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="top_rated">
+      <div class="card h-100 card-zoom">
+        <img src="/img/25.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.221</span>
+          <div class="card-title">Barbie</div>
+          <p class="card-text"> Comedy, Adventure, Fantasy</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="25" data-bs-toggle="modal"
+            data-bs-target="#movieModal25">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/26.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.595</span>
+          <div class="card-title">Nowhere</div>
+          <p class="card-text"> Thriller, Drama</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="26" data-bs-toggle="modal"
+            data-bs-target="#movieModal26">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/27.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">8.409</span>
+          <div class="card-title">Spider-Man: Across the Spider-Verse</div>
+          <p class="card-text">Animation, Action, Adventure</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="27" data-bs-toggle="modal"
+            data-bs-target="#movieModal27">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/28.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.745</span>
+          <div class="card-title">Elemental</div>
+          <p class="card-text">Animation, Comedy, Family, Fantasy, Romance </p>
+          <button type="button" class="btn open-movie-details" data-movie-id="28" data-bs-toggle="modal"
+            data-bs-target="#movieModal28">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/29.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7</span>
+          <div class="card-title">Mortal Kombat Legends: Cage Match</div>
+          <p class="card-text">Animation, Action, Fantasy </p>
+          <button type="button" class="btn open-movie-details" data-movie-id="29" data-bs-toggle="modal"
+            data-bs-target="#movieModal29">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/30.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.1</span>
+          <div class="card-title">Sila Ay Akin</div>
+          <p class="card-text">Drama</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="30" data-bs-toggle="modal"
+            data-bs-target="#movieModal30">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/31.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.347</span>
+          <div class="card-title">The Burial</div>
+          <p class="card-text">Comedy, Drama</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="31" data-bs-toggle="modal"
+            data-bs-target="#movieModal31">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="top_rated">
+      <div class="card h-100 card-zoom">
+        <img src="/img/32.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.969</span>
+          <div class="card-title">After Everything</div>
+          <p class="card-text">Romance, Drama</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="32" data-bs-toggle="modal"
+            data-bs-target="#movieModal32">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/33.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.759</span>
+          <div class="card-title">The Super Mario Bros. Movie</div>
+          <p class="card-text">Animation, Family, Adventure, Fantasy, Comedy</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="33" data-bs-toggle="modal"
+            data-bs-target="#movieModal33">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/34.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">7.798</span>
+          <div class="card-title">John Wick: Chapter 4</div>
+          <p class="card-text">Action, Thriller, Crime</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="34" data-bs-toggle="modal"
+            data-bs-target="#movieModal34">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/35.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.82</span>
+          <div class="mb-1 mr-4 card-title">A Haunting in Venice</div>
+          <p class="card-text">Mystery, Thriller, Crime</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="35" data-bs-toggle="modal"
+            data-bs-target="#movieModal35">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="now_playing">
+      <div class="card h-100 card-zoom">
+        <img src="/img/36.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">5.448</span>
+          <div class="card-title">The Conference</div>
+          <p class="card-text">Horror, Comedy, Thriller</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="36" data-bs-toggle="modal"
+            data-bs-target="#movieModal36">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="upcoming">
+      <div class="card h-100 card-zoom">
+        <img src="/img/37.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">5.619</span>
+          <div class="card-title">57 Seconds</div>
+          <p class="card-text"> Thriller, Science Fiction, Action</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="37" data-bs-toggle="modal"
+            data-bs-target="#movieModal37">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/38.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">8.246</span>
+          <div class="card-title">Oppenheimer</div>
+          <p class="card-text">Drama, History </p>
+          <button type="button" class="btn open-movie-details" data-movie-id="38" data-bs-toggle="modal"
+            data-bs-target="#movieModal38">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="top_rated">
+      <div class="card h-100 card-zoom">
+        <img src="/img/39.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.859</span>
+          <div class="card-title">The Flash</div>
+          <p class="card-text">Action, Adventure, Science Fiction </p>
+          <button type="button" class="btn open-movie-details" data-movie-id="39" data-bs-toggle="modal"
+            data-bs-target="#movieModal39">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-category="popular">
+      <div class="card h-100 card-zoom">
+        <img src="/img/40.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <span class="card-rating">6.714</span>
+          <div class="card-title">LEGO Marvel Avengers: Code Red</div>
+          <p class="card-text">Animation, Action, Family</p>
+          <button type="button" class="btn open-movie-details" data-movie-id="40" data-bs-toggle="modal"
+            data-bs-target="#movieModal40">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- paginacion -->
+  <ul class="pagination">
+    <li class="previous">
+      <a href="index.html">
+        << </a>
+    </li>
+    <li>
+      <a href="index.html">1</a>
+    </li>
+    <li>
+      <a href="page2.html">2</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="/js/script.js"></script>
+
+</html>
